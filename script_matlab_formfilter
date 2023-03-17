@@ -1,0 +1,7 @@
+sim('formfilter')
+
+plot(simout.Time, simout.Data);
+
+[w, pxx] = periodogram(simout.Data);
+
+stem(log10(w), 10*log10(pxx)); 
